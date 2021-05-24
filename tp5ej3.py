@@ -17,6 +17,7 @@ def tribonaci(numero_de_la_sucecion):
     tribonaci = 1
     cuenta = 0
     
+    lista_de_prueba = [ultimo_valor, valor_del_medio, primer_valor]
     
     
     while cuenta < numero_de_la_sucecion:
@@ -26,10 +27,11 @@ def tribonaci(numero_de_la_sucecion):
         valor_del_medio = primer_valor
         primer_valor = tribonaci
         
-        lista_de_prueba = [ultimo_valor, valor_del_medio, primer_valor]
-        
         tribonaci = ultimo_valor + valor_del_medio + primer_valor
-        print(lista_de_prueba)
+        
+        lista_de_prueba.append(tribonaci)
+        
+    print(lista_de_prueba)    
     return tribonaci
 
 
