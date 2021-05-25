@@ -7,7 +7,7 @@
 # Reemplazar por las funciones del ejercicio
     
     
-def palabra_inador(palabra): 
+def PalabraInador(palabra): 
     
     palabra_separada = list(palabra)
     
@@ -26,14 +26,19 @@ def palabra_inador(palabra):
             letra_cambiada = letra.lower()
             
             palabra_separada_cambiada.append(letra_cambiada)
+        
+        else:
+            palabra_separada_cambiada.append(letra)
     
-    
-    print(palabra_separada_cambiada)
+    cambio_listo = "".join(palabra_separada_cambiada)
+   
+    return cambio_listo
     
 def prueba():
     
-    palabra_inador(input("ingrese una palabra "))
+    palabra = PalabraInador(input("ingrese una palabra "))
     
+    print(palabra)
 
 if __name__ == "__main__":
     prueba()
