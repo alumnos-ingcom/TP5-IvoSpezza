@@ -1,5 +1,5 @@
 ################
-# Martín René - @martinvilu
+# Ivo Spezzacatena - @ivospezza
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
@@ -16,6 +16,7 @@ def fibonaci(numero_de_la_sucecion):
     fibonaci = 1
     cuenta = 0
     
+    lista_de_prueba = [1, 1]
     
     
     while cuenta < numero_de_la_sucecion:
@@ -24,10 +25,11 @@ def fibonaci(numero_de_la_sucecion):
         ultimo_valor = primer_valor
         primer_valor = fibonaci
         
-        lista_de_prueba = [ultimo_valor, primer_valor]
-        
         fibonaci = ultimo_valor + primer_valor
-        print(lista_de_prueba)
+        
+        lista_de_prueba.append(fibonaci)
+        
+    print(lista_de_prueba)
     return fibonaci
 
 

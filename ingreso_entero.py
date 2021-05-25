@@ -1,5 +1,5 @@
 ################
-# Martín René - @martinvilu
+# Ivo Spezzacatena - @ivospezza
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
