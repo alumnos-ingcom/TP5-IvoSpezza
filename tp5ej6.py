@@ -36,14 +36,12 @@ def Balanceo(cadena_de_parentesis):
     elif testeo[valor] == "[" or testeo[valor] == "{" or testeo[valor] == "(":
         return "cadena no balanceada"
     
+    conteo = 0
     
-    elif testeo [1] == "[":
-        for h in testeo:
-            if h == "]":
-                return "cadena balanceada"
+    while conteo < valor:
+        if testeo[conteo] == testeo[conteo + 1]:
             
-            else:
-                return "cadena no balanceada"
+        conteo += 1
     
 
 def prueba():
