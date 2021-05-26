@@ -45,6 +45,19 @@ def Codificador(texto, cantidad):
         elif letra == " ":
             armando_texto.append(" ")
             
+        elif letra.isdigit():
+        
+            letra = int(letra)
+            letra = letra + cantidad
+            
+            while letra > 9:
+                letra -= 9
+            letra = str(letra)
+            armando_texto.append(letra)
+            
+        else:
+            armando_texto.append(letra)
+            
     palabra_codificada = "".join(armando_texto)
     
     return palabra_codificada
@@ -86,6 +99,19 @@ def Decodificador(texto,cantidad):
             
         elif letra == " ":
             armando_texto.append(" ")
+        
+        elif letra.isdigit():
+        
+            letra = int(letra)
+            letra = letra - cantidad
+            
+            while letra > 9:
+                letra -= 9
+            letra = str(letra)
+            armando_texto.append(letra)
+        
+        else:
+            armando_texto.append(letra)
             
     palabra_codificada = "".join(armando_texto)
     
