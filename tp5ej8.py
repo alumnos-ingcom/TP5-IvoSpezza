@@ -11,6 +11,8 @@ from ingreso_entero import ingreso_entero
     
 def Codificador(texto, cantidad):
     
+    cantidad = abs(cantidad)
+    
     texto_ingresado = list(texto)
     
     armando_texto = []
@@ -65,6 +67,8 @@ def Codificador(texto, cantidad):
 
     
 def Decodificador(texto,cantidad):
+    
+    cantidad = abs(cantidad)
     
     texto_ingresado = list(texto)
     
