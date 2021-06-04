@@ -6,11 +6,57 @@
 
 # Reemplazar por las funciones del ejercicio
 
-
+def BuscaFactoriones():
+    
+    lista_de_i = []
+    
+    lista_de_factoriones = []
+    
+    for numero in range(1500000):
+        
+        numero += 1
+        
+        valor_final = 0
+        
+        if numero > 10:
+            
+            lista_del_numero = list(str(numero))
+            
+            for valor in lista_del_numero:
+                
+                conteo = 0
+                factor = 1
+                
+                valor = int(valor)
+                
+                while conteo < valor:
+                    
+                    conteo += 1
+                    
+                    factor = factor * conteo
+                    
+                valor_final = valor_final + factor
+        
+        if numero == valor_final:
+            
+            lista_de_factoriones.append(numero)
+            
+    return lista_de_factoriones
+            
+            
+                
+            
+            
+    
+    
     
 def prueba():
-   
-    pass
+    
+    factoriones = BuscaFactoriones()
+    
+    print(factoriones)
+    
+    
 if __name__ == "__main__":
     prueba()
 
