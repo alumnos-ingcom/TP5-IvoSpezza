@@ -64,16 +64,78 @@ def BinarioInador(numero_a_binarisar):
     
     return valor_binario_final
 
-def DesbinarioInador(binaro_a_enteerizar):
+def DesbinarioInador(binario_a_enteerizar):
     
-
-    pass
-
+    lista_del_binario = list(binario_a_enteerizar)
+    
+    comprobador = []
+    
+    lista_final = []
+    
+    for binn in lista_del_binario:
+        
+        comprobador.append(binn)
+        
+        if len(comprobador) == 8:
+            
+            binario = "".join(comprobador)
+            
+            if binario == "00110000":
+            
+                lista_final.append("0")
+        
+            elif binario == "00110001":
+            
+                lista_final.append("1")
+            
+            elif binario == "00110010":
+            
+                lista_final.append("2")
+            
+            elif binario == "00110011":
+            
+                lista_final.append("3")
+            
+            elif binario == "00110100":
+            
+                lista_final.append("4")
+            
+            elif binario == "00110101":
+            
+                lista_final.append("5")
+            
+            elif binario == "00110110":
+            
+                lista_final.append("6")
+            
+            elif binario == "00110111":
+            
+                lista_final.append("7")
+            
+            elif binario == "00111000":
+            
+                lista_final.append("8")
+            
+            elif binario == "00111001":
+            
+                lista_final.append("9")
+            
+            comprobador = []
+            
+            
+    valor_final = "".join(lista_final)
+    
+    return valor_final
+                         
 def prueba():
 
     binario = BinarioInador(ingreso_entero("ingrese valor entero "))
 
+    yanobinario = DesbinarioInador(binario)
+    
     print(binario)
+    
+    print(yanobinario)
     
 if __name__ == "__main__":
     prueba()
