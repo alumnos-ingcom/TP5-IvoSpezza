@@ -18,7 +18,7 @@ def BuscaFactoriones():
         
         valor_final = 0
         
-        if numero > 10:
+        if numero >= 1:
             
             lista_del_numero = list(str(numero))
             
@@ -43,11 +43,6 @@ def BuscaFactoriones():
             
     return lista_de_factoriones
             
-            
-                
-            
-            
-    
     
     
 def prueba():
