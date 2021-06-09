@@ -6,7 +6,7 @@
 
 # Reemplazar por las funciones del ejercicio
 
-from ingreso_entero import ingreso_entero
+
 
 import random
 
@@ -37,15 +37,18 @@ def RandomLista(cantidad_de_valores):
     
     while cantidad_de_valores > 0:
         
-        lista.append(random.randint(1,1000000))
+        lista.append(random.randint(1,10))
         
         cantidad_de_valores -= 1
         
     return lista
 
+
 def prueba():
 
-    lista = RandomLista(ingreso_entero("ingrese la cantidad de valores aleatorios"))
+    cantidad = random.randint(1,20)
+
+    lista = RandomLista(cantidad)
 
     promedio = PromedioLista(lista)
     
