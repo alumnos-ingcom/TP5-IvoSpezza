@@ -14,7 +14,7 @@ def TextoGenerator(cantidad_de_palabras):
     
     palabras = ["casa", "lugar", "verde", "rojo", "caminando", "explorar", "patio", "calle","sistema","auto","color"]
     
-    conectores = ["de", "el", "la", "en", "por", "es", "sera", "sos", "la", "tu", "mi"]
+    conectores = ["de", "el", "la", "en", "por", "es", "sera", "sos", "la", "tu", "mi", "depende de"]
     
     cantidad_de_palabras -= 1
     
@@ -22,7 +22,7 @@ def TextoGenerator(cantidad_de_palabras):
         
         texto.append(palabras[random.randint(-11,10)])
         
-        texto.append(conectores[random.randint(-11,10)])
+        texto.append(conectores[random.randint(-12,11)])
         
         cantidad_de_palabras -= 1
         
@@ -34,13 +34,27 @@ def TextoGenerator(cantidad_de_palabras):
 
 def BuscaPalabra(texto):
 
-    pass
-
+    palabra_a_buscar = input("que palabra del texto desea buscar? \n")
+    
+    creo = texto.find(palabra_a_buscar)
+    
+    return creo
+    
 def prueba():
    
     texto = TextoGenerator(random.randint(1,10))
-
-    print(texto)
+    
+    print(f"{texto} \n")
+    
+    posicion = BuscaPalabra(texto)
+    
+    if posicion != -1:
+        
+        print(f"esa palabra se encuentra en el lugar '{posicion}'")
+    
+    else:
+        
+        print("la palabra no pertenece al texto")
 
 if __name__ == "__main__":
     prueba()
