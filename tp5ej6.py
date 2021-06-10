@@ -7,7 +7,7 @@
 # Reemplazar por las funciones del ejercicio
     
 
-def Balanceo(cadena_de_parentesis):
+def balanceo(cadena_de_parentesis):
     
     aperturas = 0
     
@@ -40,7 +40,7 @@ def Balanceo(cadena_de_parentesis):
 def prueba():
     testeo = input("ingrese una cadena con parentesis \n")
     
-    haver = Balanceo(testeo)
+    haver = balanceo(testeo)
     
     if haver:
         print(f"la lista {testeo} esta balanceada")

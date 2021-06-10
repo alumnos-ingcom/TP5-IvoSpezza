@@ -7,7 +7,7 @@
 # Reemplazar por las funciones del ejercicio
 from ingreso_float import ingreso_float
     
-def Distancia(valor_a, valor_b):
+def distancia(valor_a, valor_b):
     
     if valor_a > valor_b:
         valor_b = valor_b * -1
@@ -23,7 +23,7 @@ def prueba():
     valor_a = ingreso_float("ingrese el primer valor")
     valor_b = ingreso_float("ingrese el segundo valor")
     
-    distancia_entre = Distancia(valor_a, valor_b)
+    distancia_entre = distancia(valor_a, valor_b)
     
     print(f"la distancia entre '{valor_a}' y '{valor_b}' es '{distancia_entre}'")
     

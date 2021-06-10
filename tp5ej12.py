@@ -7,7 +7,7 @@
 # Reemplazar por las funciones del ejercicio
 from ingreso_entero import ingreso_entero
 
-def GeneraListas(cantidad_de_valores, numero_de_lista):
+def genera_listas(cantidad_de_valores, numero_de_lista):
     
     lista = []
     
@@ -19,7 +19,7 @@ def GeneraListas(cantidad_de_valores, numero_de_lista):
     
     return lista
 
-def ComparaListas(lista_a, lista_b):
+def compara_listas(lista_a, lista_b):
     
     contenido_compartido = True
     
@@ -47,8 +47,8 @@ def prueba():
    
     cantidad_de_valores = ingreso_entero("cuantos valores quiere en sus listas?")
     
-    lista1 = GeneraListas(cantidad_de_valores,1)
-    lista2 = GeneraListas(cantidad_de_valores,2)
+    lista1 = genera_listas(cantidad_de_valores,1)
+    lista2 = genera_listas(cantidad_de_valores,2)
     
     tienen_lo_mismo = ComparaListas(lista1, lista2)
     
@@ -56,7 +56,8 @@ def prueba():
         
         print(f"la lista {lista1} y la lista {lista2} poseen el mismo contenido")
         
-    elif not tienen_lo_mismo:
+    else:
+        
         
         print(f"la lista {lista1} y la lista {lista2} no comparten el contenido")
 

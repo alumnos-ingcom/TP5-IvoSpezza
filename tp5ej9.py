@@ -6,7 +6,7 @@
 
 # Reemplazar por las funciones del ejercicio
 
-def BuscaFactoriones():
+def busca_factoriones():
     
     lista_de_i = []
     
@@ -47,7 +47,7 @@ def BuscaFactoriones():
     
 def prueba():
     
-    factoriones = BuscaFactoriones()
+    factoriones = busca_factoriones()
     
     print(factoriones)
     

@@ -8,7 +8,7 @@
 
 from ingreso_entero import ingreso_entero
 
-def BinarioInador(numero_a_binarisar):
+def binario_inador(numero_a_binarisar):
     
     lista_para_binario = list(str(numero_a_binarisar))
     
@@ -64,7 +64,7 @@ def BinarioInador(numero_a_binarisar):
     
     return valor_binario_final
 
-def DesbinarioInador(binario_a_enteerizar):
+def desbinario_inador(binario_a_enteerizar):
     
     lista_del_binario = list(binario_a_enteerizar)
     
@@ -129,9 +129,9 @@ def DesbinarioInador(binario_a_enteerizar):
                          
 def prueba():
 
-    binario = BinarioInador(ingreso_entero("ingrese valor entero "))
+    binario = binario_inador(ingreso_entero("ingrese valor entero "))
 
-    yanobinario = DesbinarioInador(binario)
+    yanobinario = desbinario_inador(binario)
     
     print(binario)
     

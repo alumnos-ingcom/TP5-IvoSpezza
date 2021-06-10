@@ -7,7 +7,7 @@
 # Reemplazar por las funciones del ejercicio
     
     
-def PalabraInador(palabra): 
+def palabra_inador(palabra): 
     
     palabra_separada = list(palabra)
     
@@ -36,9 +36,11 @@ def PalabraInador(palabra):
     
 def prueba():
     
-    palabra = PalabraInador(input("ingrese una palabra "))
+    palabra = input("ingrese una palabra ")
     
-    print(palabra)
+    mayusminus = palabra_inador(palabra)
+    
+    print(mayusminus)
 
 if __name__ == "__main__":
     prueba()

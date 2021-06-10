@@ -8,21 +8,21 @@
 
 import random
 
-def TextoGenerator(cantidad_de_palabras):
+def texto_generator(cantidad_de_palabras):
     
     texto = [] 
     
-    palabras = ["casa", "lugar", "verde", "rojo", "caminando", "explorar", "patio", "calle","sistema","auto","color"]
+    palabras = ["casa", "lugar", "verde", "rojo", "caminando", "explorar", "patio", "calle","sistema","auto","color","azul"]
     
-    conectores = ["de", "el", "la", "en", "por", "es", "sera", "sos", "la", "tu", "mi", "depende de"]
+    conectores = ["de", "el", "la", "en", "por", "es", "sera", "sos", "la", "tu", "mi", "depende de", "del","que"]
     
     cantidad_de_palabras -= 1
     
     while cantidad_de_palabras > 0:
         
-        texto.append(palabras[random.randint(-11,10)])
+        texto.append(palabras[random.randint(-12,11)])
         
-        texto.append(conectores[random.randint(-12,11)])
+        texto.append(conectores[random.randint(-14,13)])
         
         cantidad_de_palabras -= 1
         
@@ -32,7 +32,7 @@ def TextoGenerator(cantidad_de_palabras):
     
     return texto_final
 
-def BuscaPalabra(texto):
+def busca_palabra(texto):
 
     palabra_a_buscar = input("que palabra del texto desea buscar? \n")
     
@@ -42,11 +42,11 @@ def BuscaPalabra(texto):
     
 def prueba():
    
-    texto = TextoGenerator(random.randint(1,10))
+    texto = texto_generator(random.randint(1,10))
     
     print(f"{texto} \n")
     
-    posicion = BuscaPalabra(texto)
+    posicion = busca_palabra(texto)
     
     if posicion != -1:
         

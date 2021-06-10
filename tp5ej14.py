@@ -7,7 +7,7 @@
 # Reemplazar por las funciones del ejercicio
 from ingreso_entero import ingreso_entero
 
-def Capicua(numero):
+def capicua(numero):
     
     lista = list(str(numero))
     
@@ -37,7 +37,7 @@ def prueba():
 
     numero = ingreso_entero("ingrese un numero")
     
-    capicua = Capicua(numero)
+    capicua_n = capicua(numero)
     
     if capicua:
         

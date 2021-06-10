@@ -9,7 +9,7 @@
 from ingreso_entero import ingreso_entero
 
     
-def Codificador(texto, cantidad):
+def codificador(texto, cantidad):
     
     cantidad = abs(cantidad)
     
@@ -66,7 +66,7 @@ def Codificador(texto, cantidad):
             
 
     
-def Decodificador(texto,cantidad):
+def decodificador(texto,cantidad):
     
     cantidad = abs(cantidad)
     
@@ -128,11 +128,11 @@ def prueba():
        
     nivel_codificado = ingreso_entero("nivel de codificado") 
     
-    texto_codeado = Codificador(texto, nivel_codificado)
+    texto_codeado = codificador(texto, nivel_codificado)
     
     print(texto_codeado)
     
-    texto_otra_vez = Decodificador(texto_codeado, nivel_codificado)
+    texto_otra_vez = decodificador(texto_codeado, nivel_codificado)
     
     print(texto_otra_vez)
     

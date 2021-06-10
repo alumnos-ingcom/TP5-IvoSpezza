@@ -11,7 +11,7 @@
 import random
 
 
-def PromedioLista(lista):
+def promedio_lista(lista):
     
     promedio_final = 0
     
@@ -31,7 +31,7 @@ def PromedioLista(lista):
     return promedio_final
     
     
-def RandomLista(cantidad_de_valores):
+def random_lista(cantidad_de_valores):
 
     lista = []
     
@@ -48,9 +48,9 @@ def prueba():
 
     cantidad = random.randint(1,20)
 
-    lista = RandomLista(cantidad)
+    lista = random_lista(cantidad)
 
-    promedio = PromedioLista(lista)
+    promedio = promedio_lista(lista)
     
     print(promedio)
 
