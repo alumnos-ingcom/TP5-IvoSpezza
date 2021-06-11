@@ -12,7 +12,7 @@ def texto_generator(cantidad_de_palabras):
     
     texto = [] 
     
-    palabras = ["casa", "lugar", "verde", "rojo", "caminando", "explorar", "patio", "calle","sistema","auto","color","azul"]
+    palabras = ["casa", "lugar", "verde", "rojo", "caminando", "explorar", "patio", "calle","sistema","auto","color","azul","juguete"]
     
     conectores = ["de", "el", "la", "en", "por", "es", "sera", "sos", "la", "tu", "mi", "depende de", "del","que"]
     
@@ -20,7 +20,7 @@ def texto_generator(cantidad_de_palabras):
     
     while cantidad_de_palabras > 0:
         
-        texto.append(palabras[random.randint(-12,11)])
+        texto.append(palabras[random.randint(-13,12)])
         
         texto.append(conectores[random.randint(-14,13)])
         
