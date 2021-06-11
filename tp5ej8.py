@@ -5,7 +5,9 @@
 
 
 # Reemplazar por las funciones del ejercicio
-    
+
+from tp5ej13 import texto_generator
+
 from ingreso_entero import ingreso_entero
 
     
@@ -124,7 +126,7 @@ def decodificador(texto,cantidad):
     
 def prueba():
    
-    texto = input("ingrese un texto ")
+    texto = texto_generator(ingreso_entero("cuantas palabras desea en el texto?"))
        
     nivel_codificado = ingreso_entero("nivel de codificado") 
     
