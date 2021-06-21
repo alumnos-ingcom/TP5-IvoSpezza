@@ -10,122 +10,60 @@ from ingreso_entero import ingreso_entero
 
 def binario_inador(numero_a_binarisar):
     
-    lista_para_binario = list(str(numero_a_binarisar))
+    numero_a_dividir = numero_a_binarisar
     
-    lista_binaria = []
+    binario = []
     
-    
-    
-    for num in lista_para_binario:
+    while numero_a_dividir >= 1:
         
-        num = int(num)
+        resto = numero_a_dividir
         
-        if num == 0:
-            
-            lista_binaria.append("00110000")
+        numero_a_dividir = numero_a_dividir / 2
         
-        elif num == 1:
+        numero_a_dividir = int(numero_a_dividir)
+        
+        while resto >= 1:
             
-            lista_binaria.append("00110001")
+            resto -= 2
             
-        elif num == 2:
-            
-            lista_binaria.append("00110010")
-            
-        elif num == 3:
-            
-            lista_binaria.append("00110011")
-            
-        elif num == 4:
-            
-            lista_binaria.append("00110100")
-            
-        elif num == 5:
-            
-            lista_binaria.append("00110101")
-            
-        elif num == 6:
-            
-            lista_binaria.append("00110110")
-            
-        elif num == 7:
-            
-            lista_binaria.append("00110111")
-            
-        elif num == 8:
-            
-            lista_binaria.append("00111000")
-            
-        elif num == 9:
-            
-            lista_binaria.append("00111001")
+            if resto == 0:
+                
+                binario.append("0")
+                
+            elif resto == -1:
+                
+                binario.append("1")
     
-    valor_binario_final = "".join(lista_binaria)
+    binario.reverse()
     
-    return valor_binario_final
+    binario = "".join(binario)
+    
+    return binario
+
+
+
 
 def desbinario_inador(binario_a_enteerizar):
     
-    lista_del_binario = list(binario_a_enteerizar)
     
-    comprobador = []
+    binario = list(binario_a_enteerizar)
     
-    lista_final = []
     
-    for binn in lista_del_binario:
-        
-        comprobador.append(binn)
-        
-        if len(comprobador) == 8:
-            
-            binario = "".join(comprobador)
-            
-            if binario == "00110000":
-            
-                lista_final.append("0")
-        
-            elif binario == "00110001":
-            
-                lista_final.append("1")
-            
-            elif binario == "00110010":
-            
-                lista_final.append("2")
-            
-            elif binario == "00110011":
-            
-                lista_final.append("3")
-            
-            elif binario == "00110100":
-            
-                lista_final.append("4")
-            
-            elif binario == "00110101":
-            
-                lista_final.append("5")
-            
-            elif binario == "00110110":
-            
-                lista_final.append("6")
-            
-            elif binario == "00110111":
-            
-                lista_final.append("7")
-            
-            elif binario == "00111000":
-            
-                lista_final.append("8")
-            
-            elif binario == "00111001":
-            
-                lista_final.append("9")
-            
-            comprobador = []
-            
-            
-    valor_final = "".join(lista_final)
+    entero = 1
     
-    return valor_final
+    salto = True
+    
+    for numero in binario:
+            
+        if salto:
+            
+            salto = False
+            
+        else:
+            
+            entero = (entero * 2) + int(numero)
+    
+    return entero
                          
 def prueba():
 
