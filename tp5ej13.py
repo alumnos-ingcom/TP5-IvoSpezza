@@ -12,7 +12,7 @@ def texto_generator(cantidad_de_palabras):
     
     texto = [] 
     
-    palabras = ["casa", "lugar", "verde", "rojo", "caminando", "exploras", "patio", "calle","sistema","auto",
+    palabras = ["casa", "lugar", "verde", "rojo", "caminando", "explorar", "patio", "calle","sistema","auto",
                 "color","azul","juguete","jamon","gato","queso","para","que","supuestamente", "nunca","sera","siempre"]
     
     conectores = ["de", "el", "la", "en", "por", "es", "sera", "sos", "la", "tu", "mi",

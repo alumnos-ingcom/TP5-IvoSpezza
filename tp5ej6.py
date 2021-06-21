@@ -13,15 +13,15 @@ def balanceo(cadena_de_parentesis):
     
     balanceo = True
 
-    for corchete in cadena_de_parentesis:
+    for caracter in cadena_de_parentesis:
         
         if aperturas >= 0:
         
-            if corchete == "[" or corchete == "{" or corchete == "(" :
+            if caracter == "[" or caracter == "{" or caracter == "(" :
         
                 aperturas = aperturas + 1
         
-            elif corchete == "]" or corchete == "}" or corchete == ")" :
+            elif caracter == "]" or caracter == "}" or caracter == ")" :
         
                 aperturas = aperturas - 1
             

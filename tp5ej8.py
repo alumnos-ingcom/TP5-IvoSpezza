@@ -132,7 +132,7 @@ def prueba():
     
     texto_codeado = codificador(texto, nivel_codificado)
     
-    print(texto_codeado)
+    print(f"{texto_codeado}\n")
     
     texto_otra_vez = decodificador(texto_codeado, nivel_codificado)
     
