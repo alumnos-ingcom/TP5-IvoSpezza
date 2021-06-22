@@ -20,15 +20,19 @@ def texto_generator(cantidad_de_palabras):
     
     cantidad_de_palabras -= 1
     
+    color = 0
+    
     while cantidad_de_palabras > 0:
         
-        texto.append(palabras[random.randint(-22,21)])
+        color = random.randint(32,36)
         
-        texto.append(conectores[random.randint(-19,18)])
+        texto.append(f"\x1b[0;{color}m{palabras[random.randint(-22,21)]}\x1b[0;37m")
+        
+        texto.append(f"\x1b[0;{color}m{conectores[random.randint(-19,18)]}\x1b[0;37m")
         
         cantidad_de_palabras -= 1
         
-    texto.append(palabras[random.randint(-11,10)])
+    texto.append(f"\x1b[0;{color}m{palabras[random.randint(-22,21)]}\x1b[0;37m")
     
     texto_final = " ".join(texto)
     
