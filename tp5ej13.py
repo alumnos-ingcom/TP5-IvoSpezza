@@ -34,13 +34,22 @@ def texto_generator(cantidad_de_palabras):
     
     return texto_final
 
-def busca_palabra(texto):
-
-    palabra_a_buscar = input("que palabra del texto desea buscar? \n")
+def busca_palabra(texto, palabra_a_buscar):
     
-    creo = texto.find(palabra_a_buscar)
+    lista_de_palabras = texto.split(" ")
     
-    return creo
+    pocicion = 0
+    
+    for lugar,palabra in enumerate(lista_de_palabras):
+        
+        
+        if palabra_a_buscar == palabra:
+            
+            pocicion = lugar + 1
+            
+            break
+    
+    return pocicion
     
 def prueba():
    
@@ -48,7 +57,9 @@ def prueba():
     
     print(f"{texto} \n")
     
-    posicion = busca_palabra(texto)
+    palabra = input("que palabra del texto desea buscar? \n")
+    
+    posicion = busca_palabra(texto, palabra)
     
     if posicion != -1:
         
