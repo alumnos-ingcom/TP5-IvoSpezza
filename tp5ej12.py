@@ -45,12 +45,15 @@ def compara_listas(lista_a, lista_b):
 
 def prueba():
    
-    cantidad_de_valores = ingreso_entero("cuantos valores quiere en sus listas?")
+    cantidad_de_valores = ingreso_entero("cuantos valores quiere en la lista 1?")
     
     lista1 = genera_listas(cantidad_de_valores,1)
+    
+    cantidad_de_valores = ingreso_entero("cuantos valores quiere en la lista 2?")
+    
     lista2 = genera_listas(cantidad_de_valores,2)
     
-    tienen_lo_mismo = ComparaListas(lista1, lista2)
+    tienen_lo_mismo = compara_listas(lista1, lista2)
     
     if tienen_lo_mismo:
         
