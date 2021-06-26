@@ -70,7 +70,29 @@ def convierte_a_color(texto):
             
         texto_color.append(f"\x1b[{estilo};{letra_color};{fondo_color}m"+f"{palabra}"+"\x1b[0m")
 
-    texto_color = f"\x1b[{estilo};{letra_color};{fondo_color}m \x1b[0m".join(texto_color)
+    texto_color = " ".join(texto_color)
+    
+    lista_de_texto = list(texto_color)
+    
+    texto_color = []
+    
+    for letra in lista_de_texto:
+        
+        if letra.isspace():
+        
+            estilo = random.randint(1,9)
+                    
+            letra_color = random.randint(31,36)
+                      
+            fondo_color = random.randint(41,46)
+            
+            texto_color.append(f"\x1b[{estilo};{letra_color};{fondo_color}m"+f"{letra}"+"\x1b[0m")
+            
+        else:
+            
+            texto_color.append(letra)
+    
+    texto_color = "".join(texto_color)
     
     return texto_color
 
@@ -78,23 +100,21 @@ def prueba():
    
     texto = texto_generator(100)
     
-    print(f"{texto} \n")
-    
     texto_a_color = convierte_a_color(texto)
     
     print(texto_a_color)
     
-#     palabra = input("que palabra del texto desea buscar? \n")
-#     
-#     posicion = busca_palabra(texto, palabra)
-#     
-#     if posicion != -1:
-#         
-#         print(f"esa palabra se encuentra en el lugar '{posicion}'")
-#     
-#     else:
-#         
-#         print("la palabra no pertenece al texto")
+    palabra = input("que palabra del texto desea buscar? \n")
+    
+    posicion = busca_palabra(texto, palabra)
+    
+    if posicion != -1:
+        
+        print(f"esa palabra se encuentra en el lugar '{posicion}'")
+    
+    else:
+        
+        print("la palabra no pertenece al texto")
 
     
 
